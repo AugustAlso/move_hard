@@ -6,8 +6,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',  # NOQA
     # Examples:
-    url(r'^$', TemplateView.as_view(template_name='base.html')),
+    #url(r'^$', TemplateView.as_view(template_name='base.html')),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^moves/', include('moves.urls')),
 )

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+I'm template machinery, 
+<ul>
+{% for move in movelist %}
+<li>{{move}}</li>
+{% endfor %}
+</ul>
+
+<ul>
+{% for game in gamelist %}
+<li>{{game}}</li>
+{% endfor %}
+</ul>
+
+<form method="post" action="{% url "index" %}" >
+{{form}}
+<button name="button" type="submit">Submit Your Move</button>
+
+</form>
+
+{{errors}}
+
+{% endblock content %}
